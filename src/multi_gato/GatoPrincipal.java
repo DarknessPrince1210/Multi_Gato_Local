@@ -4,18 +4,47 @@
  */
 package multi_gato;
 
+import java.awt.Color;
+import javax.swing.JLabel;
+
 /**
  *
  * @author diazt
  */
 public class GatoPrincipal extends javax.swing.JFrame {
-
-    /**
-     * Creates new form GatoPrincipal
-     */
+    
+    String turn="X";
+    JLabel boxes[]=new JLabel[9];
+    int champions[][]={
+        {1,2,3},
+        {4,5,6},
+        {7,8,9},
+        {1,4,7},
+        {2,5,8},
+        {3,6,9},
+        {1,5,9},
+        {3,5,7}
+    };
+    
+    
+    
+    
     public GatoPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        boxes[0]=BoxSI;
+        boxes[1]=BoxSC;
+        boxes[2]=BoxSD;
+        
+        boxes[3]=BoxCI;
+        boxes[4]=BoxCC;
+        boxes[5]=BoxCD;
+        
+        boxes[6]=BoxII;
+        boxes[7]=BoxIC;
+        boxes[8]=BoxID;
+
     }
 
     /**
@@ -29,17 +58,18 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        BoxSI = new javax.swing.JLabel();
+        BoxSC = new javax.swing.JLabel();
+        BoxSD = new javax.swing.JLabel();
+        BoxCI = new javax.swing.JLabel();
+        BoxCC = new javax.swing.JLabel();
+        BoxCD = new javax.swing.JLabel();
+        BoxII = new javax.swing.JLabel();
+        BoxIC = new javax.swing.JLabel();
+        BoxID = new javax.swing.JLabel();
+        Titulo = new javax.swing.JLabel();
+        Turno = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GatoPrincipal");
@@ -49,111 +79,102 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(23, 190, 187));
 
-        jLabel1.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("X");
-        jLabel1.setOpaque(true);
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxSI.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSI.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxSI.setForeground(new java.awt.Color(239, 122, 26));
+        BoxSI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxSI.setOpaque(true);
+        BoxSI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel1MousePressed(evt);
+                BoxSIMousePressed(evt);
             }
         });
 
-        jLabel2.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("X");
-        jLabel2.setOpaque(true);
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxSC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxSC.setForeground(new java.awt.Color(239, 122, 26));
+        BoxSC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxSC.setOpaque(true);
+        BoxSC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel2MousePressed(evt);
+                BoxSCMousePressed(evt);
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("X");
-        jLabel3.setOpaque(true);
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxSD.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSD.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxSD.setForeground(new java.awt.Color(239, 122, 26));
+        BoxSD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxSD.setOpaque(true);
+        BoxSD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel3MousePressed(evt);
+                BoxSDMousePressed(evt);
             }
         });
 
-        jLabel4.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("X");
-        jLabel4.setOpaque(true);
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxCI.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCI.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxCI.setForeground(new java.awt.Color(255, 203, 71));
+        BoxCI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxCI.setOpaque(true);
+        BoxCI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel4MousePressed(evt);
+                BoxCIMousePressed(evt);
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(239, 122, 26));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("O");
-        jLabel5.setOpaque(true);
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxCC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxCC.setForeground(new java.awt.Color(239, 122, 26));
+        BoxCC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxCC.setOpaque(true);
+        BoxCC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel5MousePressed(evt);
+                BoxCCMousePressed(evt);
             }
         });
 
-        jLabel6.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("X");
-        jLabel6.setOpaque(true);
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxCD.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCD.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxCD.setForeground(new java.awt.Color(239, 122, 26));
+        BoxCD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxCD.setOpaque(true);
+        BoxCD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel6MousePressed(evt);
+                BoxCDMousePressed(evt);
             }
         });
 
-        jLabel7.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("X");
-        jLabel7.setOpaque(true);
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxII.setBackground(new java.awt.Color(41, 39, 42));
+        BoxII.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxII.setForeground(new java.awt.Color(239, 122, 26));
+        BoxII.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxII.setOpaque(true);
+        BoxII.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel7MousePressed(evt);
+                BoxIIMousePressed(evt);
             }
         });
 
-        jLabel8.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("X");
-        jLabel8.setOpaque(true);
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxIC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxIC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxIC.setForeground(new java.awt.Color(255, 203, 71));
+        BoxIC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxIC.setOpaque(true);
+        BoxIC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel8MousePressed(evt);
+                BoxICMousePressed(evt);
             }
         });
 
-        jLabel9.setBackground(new java.awt.Color(41, 39, 42));
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 203, 71));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("X");
-        jLabel9.setOpaque(true);
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        BoxID.setBackground(new java.awt.Color(41, 39, 42));
+        BoxID.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        BoxID.setForeground(new java.awt.Color(255, 203, 71));
+        BoxID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BoxID.setOpaque(true);
+        BoxID.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel9MousePressed(evt);
+                BoxIDMousePressed(evt);
             }
         });
 
@@ -162,50 +183,54 @@ public class GatoPrincipal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxSI, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxSC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BoxSD, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxCI, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxCC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BoxCD, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxII, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BoxIC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(BoxID, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BoxSI, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxSC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxSD, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BoxCI, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxCD, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxCC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BoxII, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxID, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxIC, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("MULTI GATO");
+        Titulo.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo.setText("MULTI GATO");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("TIME: 12");
+        Turno.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        Turno.setForeground(new java.awt.Color(255, 255, 255));
+        Turno.setText("TURNO: O");
+
+        Tiempo.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        Tiempo.setForeground(new java.awt.Color(255, 255, 255));
+        Tiempo.setText("TIME: 12");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -214,31 +239,30 @@ public class GatoPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
+                        .addGap(99, 99, 99)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jLabel10)))
-                .addContainerGap(96, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(285, Short.MAX_VALUE)
-                    .addComponent(jLabel11)
-                    .addGap(19, 19, 19)))
+                        .addComponent(Titulo)))
+                .addContainerGap(99, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(Turno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Tiempo)
+                .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addComponent(jLabel10)
-                .addGap(27, 27, 27)
+                .addComponent(Titulo)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Turno)
+                    .addComponent(Tiempo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(32, 32, 32)
-                    .addComponent(jLabel11)
-                    .addContainerGap(317, Short.MAX_VALUE)))
+                .addGap(42, 42, 42))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -255,45 +279,79 @@ public class GatoPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
-        
-    }//GEN-LAST:event_jLabel1MousePressed
+    private void BoxSIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxSIMousePressed
+        onPressBox(0);
+    }//GEN-LAST:event_BoxSIMousePressed
 
-    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel2MousePressed
+    private void BoxCIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxCIMousePressed
+        onPressBox(3);
+    }//GEN-LAST:event_BoxCIMousePressed
 
-    private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel3MousePressed
+    private void BoxCCMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxCCMousePressed
+        onPressBox(4);
+    }//GEN-LAST:event_BoxCCMousePressed
 
-    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MousePressed
+    private void BoxCDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxCDMousePressed
+        onPressBox(5);
+    }//GEN-LAST:event_BoxCDMousePressed
 
-    private void jLabel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MousePressed
+    private void BoxIIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxIIMousePressed
+        onPressBox(6);
+    }//GEN-LAST:event_BoxIIMousePressed
 
-    private void jLabel6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel6MousePressed
+    private void BoxICMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxICMousePressed
+        onPressBox(7);
+    }//GEN-LAST:event_BoxICMousePressed
 
-    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel7MousePressed
+    private void BoxIDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxIDMousePressed
+        onPressBox(8);
+    }//GEN-LAST:event_BoxIDMousePressed
 
-    private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8MousePressed
+    private void BoxSDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxSDMousePressed
+        onPressBox(2);
+    }//GEN-LAST:event_BoxSDMousePressed
 
-    private void jLabel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MousePressed
+    private void BoxSCMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BoxSCMousePressed
+        onPressBox(1);
+    }//GEN-LAST:event_BoxSCMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
+    public void onPressBox(int casilla){
+        if(boxes[casilla].getText().equals("")){
+            boxes[casilla].setText(turn);
+            if(boxes[casilla].getText().equals("X")){
+                boxes[casilla].setForeground(Color.WHITE);
+            }else{
+                boxes[casilla].setForeground(Color.ORANGE);
+            }
+            changeTurn();
+            showWinner();
+        }
+    }
+    
+    public void changeTurn(){
+        if(turn.equals("X")){
+            turn="O";
+        }else{
+            turn="X";
+        }
+    }
+    
+    public void showWinner(){
+        for(int i=0;i<champions.length;i++){
+            if(boxes[champions[i][0]-1].getText().equals("X")&& boxes[champions[i][1]-1].getText().equals("X")&&boxes[champions[i][2]-1].getText().equals("X")){
+                boxes[champions[i][0]-1].setBackground(Color.green);
+                boxes[champions[i][1]-1].setBackground(Color.green);
+                boxes[champions[i][2]-1].setBackground(Color.green);
+            }
+            if(boxes[champions[i][0]-1].getText().equals("O")&& boxes[champions[i][1]-1].getText().equals("O")&&boxes[champions[i][2]-1].getText().equals("O")){
+                boxes[champions[i][0]-1].setBackground(Color.green);
+                boxes[champions[i][1]-1].setBackground(Color.green);
+                boxes[champions[i][2]-1].setBackground(Color.green);
+            }
+        }
+    }
+            
+            
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -327,17 +385,18 @@ public class GatoPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel BoxCC;
+    private javax.swing.JLabel BoxCD;
+    private javax.swing.JLabel BoxCI;
+    private javax.swing.JLabel BoxIC;
+    private javax.swing.JLabel BoxID;
+    private javax.swing.JLabel BoxII;
+    private javax.swing.JLabel BoxSC;
+    private javax.swing.JLabel BoxSD;
+    private javax.swing.JLabel BoxSI;
+    private javax.swing.JLabel Tiempo;
+    private javax.swing.JLabel Titulo;
+    private javax.swing.JLabel Turno;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
