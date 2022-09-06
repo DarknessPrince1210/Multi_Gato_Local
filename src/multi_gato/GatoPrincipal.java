@@ -38,6 +38,8 @@ public class GatoPrincipal extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GatoPrincipal");
@@ -61,6 +63,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(41, 39, 42));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 203, 71));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("X");
         jLabel2.setOpaque(true);
@@ -72,6 +75,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(41, 39, 42));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 203, 71));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("X");
         jLabel3.setOpaque(true);
@@ -83,6 +87,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(41, 39, 42));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 203, 71));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("X");
         jLabel4.setOpaque(true);
@@ -94,8 +99,9 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(41, 39, 42));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(239, 122, 26));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("X");
+        jLabel5.setText("O");
         jLabel5.setOpaque(true);
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -105,6 +111,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(41, 39, 42));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 203, 71));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("X");
         jLabel6.setOpaque(true);
@@ -116,6 +123,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel7.setBackground(new java.awt.Color(41, 39, 42));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 203, 71));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("X");
         jLabel7.setOpaque(true);
@@ -127,6 +135,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(41, 39, 42));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 203, 71));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("X");
         jLabel8.setOpaque(true);
@@ -138,6 +147,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
         jLabel9.setBackground(new java.awt.Color(41, 39, 42));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 203, 71));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("X");
         jLabel9.setOpaque(true);
@@ -189,21 +199,46 @@ public class GatoPrincipal extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("MULTI GATO");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("TIME: 12");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel10)))
                 .addContainerGap(96, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(285, Short.MAX_VALUE)
+                    .addComponent(jLabel11)
+                    .addGap(19, 19, 19)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addGap(27, 27, 27)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(32, 32, 32)
+                    .addComponent(jLabel11)
+                    .addContainerGap(317, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -293,6 +328,8 @@ public class GatoPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
