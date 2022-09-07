@@ -12,7 +12,7 @@ import javax.swing.JLabel;
  * @author diazt
  */
 public class GatoPrincipal extends javax.swing.JFrame {
-    
+    JLabel actualTurn=new JLabel();
     String turn="X";
     JLabel boxes[]=new JLabel[9];
     int champions[][]={
@@ -44,8 +44,16 @@ public class GatoPrincipal extends javax.swing.JFrame {
         boxes[6]=BoxII;
         boxes[7]=BoxIC;
         boxes[8]=BoxID;
+        
+        actualTurn=Turno;
+        
+        
 
     }
+    
+    //Color fondito=boxes[0].getBackground();
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,16 +78,17 @@ public class GatoPrincipal extends javax.swing.JFrame {
         Titulo = new javax.swing.JLabel();
         Turno = new javax.swing.JLabel();
         Tiempo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GatoPrincipal");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(41, 39, 42));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(23, 190, 187));
 
-        BoxSI.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSI.setBackground(new java.awt.Color(0, 0, 0));
         BoxSI.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxSI.setForeground(new java.awt.Color(239, 122, 26));
         BoxSI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -90,7 +99,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxSC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSC.setBackground(new java.awt.Color(0, 0, 0));
         BoxSC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxSC.setForeground(new java.awt.Color(239, 122, 26));
         BoxSC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -101,7 +110,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxSD.setBackground(new java.awt.Color(41, 39, 42));
+        BoxSD.setBackground(new java.awt.Color(0, 0, 0));
         BoxSD.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxSD.setForeground(new java.awt.Color(239, 122, 26));
         BoxSD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -112,7 +121,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxCI.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCI.setBackground(new java.awt.Color(0, 0, 0));
         BoxCI.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxCI.setForeground(new java.awt.Color(255, 203, 71));
         BoxCI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -123,7 +132,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxCC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCC.setBackground(new java.awt.Color(0, 0, 0));
         BoxCC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxCC.setForeground(new java.awt.Color(239, 122, 26));
         BoxCC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -134,7 +143,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxCD.setBackground(new java.awt.Color(41, 39, 42));
+        BoxCD.setBackground(new java.awt.Color(0, 0, 0));
         BoxCD.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxCD.setForeground(new java.awt.Color(239, 122, 26));
         BoxCD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -145,7 +154,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxII.setBackground(new java.awt.Color(41, 39, 42));
+        BoxII.setBackground(new java.awt.Color(0, 0, 0));
         BoxII.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxII.setForeground(new java.awt.Color(239, 122, 26));
         BoxII.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -156,7 +165,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxIC.setBackground(new java.awt.Color(41, 39, 42));
+        BoxIC.setBackground(new java.awt.Color(0, 0, 0));
         BoxIC.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxIC.setForeground(new java.awt.Color(255, 203, 71));
         BoxIC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -167,7 +176,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BoxID.setBackground(new java.awt.Color(41, 39, 42));
+        BoxID.setBackground(new java.awt.Color(0, 0, 0));
         BoxID.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         BoxID.setForeground(new java.awt.Color(255, 203, 71));
         BoxID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -232,30 +241,50 @@ public class GatoPrincipal extends javax.swing.JFrame {
         Tiempo.setForeground(new java.awt.Color(255, 255, 255));
         Tiempo.setText("TIME: 12");
 
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("RESTART");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(Titulo)))
-                .addContainerGap(99, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(Turno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Tiempo)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Titulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Turno, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Tiempo)))
                 .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(Titulo)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Titulo)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jButton1)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Turno)
@@ -315,6 +344,14 @@ public class GatoPrincipal extends javax.swing.JFrame {
         onPressBox(1);
     }//GEN-LAST:event_BoxSCMousePressed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        restartGame();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
+
     public void onPressBox(int casilla){
         if(boxes[casilla].getText().equals("")){
             boxes[casilla].setText(turn);
@@ -334,21 +371,57 @@ public class GatoPrincipal extends javax.swing.JFrame {
         }else{
             turn="X";
         }
+        actualTurn.setText("TURNO: "+turn);
     }
     
     public void showWinner(){
         for(int i=0;i<champions.length;i++){
             if(boxes[champions[i][0]-1].getText().equals("X")&& boxes[champions[i][1]-1].getText().equals("X")&&boxes[champions[i][2]-1].getText().equals("X")){
-                boxes[champions[i][0]-1].setBackground(Color.green);
-                boxes[champions[i][1]-1].setBackground(Color.green);
-                boxes[champions[i][2]-1].setBackground(Color.green);
+                boxes[champions[i][0]-1].setBackground(Color.lightGray);
+                boxes[champions[i][1]-1].setBackground(Color.lightGray);
+                boxes[champions[i][2]-1].setBackground(Color.lightGray);
+                
+                /*boxes[0].setText("");
+                boxes[1].setText("");
+                boxes[2].setText("");
+                boxes[3].setText("");
+                boxes[4].setText("");
+                boxes[5].setText("");
+                boxes[6].setText("");
+                boxes[7].setText("");
+                boxes[8].setText("");*/
+                
             }
             if(boxes[champions[i][0]-1].getText().equals("O")&& boxes[champions[i][1]-1].getText().equals("O")&&boxes[champions[i][2]-1].getText().equals("O")){
-                boxes[champions[i][0]-1].setBackground(Color.green);
-                boxes[champions[i][1]-1].setBackground(Color.green);
-                boxes[champions[i][2]-1].setBackground(Color.green);
+                boxes[champions[i][0]-1].setBackground(Color.lightGray);
+                boxes[champions[i][1]-1].setBackground(Color.lightGray);
+                boxes[champions[i][2]-1].setBackground(Color.lightGray);
             }
         }
+    }
+    
+    public void restartGame(){
+        boxes[0].setText("");
+        boxes[1].setText("");
+        boxes[2].setText("");
+        boxes[3].setText("");
+        boxes[4].setText("");
+        boxes[5].setText("");
+        boxes[6].setText("");
+        boxes[7].setText("");
+        boxes[8].setText("");
+        
+        boxes[0].setBackground(Color.black);
+        boxes[1].setBackground(Color.black);
+        boxes[2].setBackground(Color.black);
+        boxes[3].setBackground(Color.black);
+        boxes[4].setBackground(Color.black);
+        boxes[5].setBackground(Color.black);
+        boxes[6].setBackground(Color.black);
+        boxes[7].setBackground(Color.black);
+        boxes[8].setBackground(Color.black);
+        
+        
     }
             
             
@@ -397,6 +470,7 @@ public class GatoPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Turno;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
